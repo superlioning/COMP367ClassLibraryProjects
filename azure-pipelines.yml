@@ -13,6 +13,7 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
+  NUGET_ENABLE_LEGACY_CSPROJ_PACK: true
 
 steps:
 - task: NuGetToolInstaller@1
@@ -29,6 +30,6 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
-    command: 'dotnet pack'
+    command: 'pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'off'
