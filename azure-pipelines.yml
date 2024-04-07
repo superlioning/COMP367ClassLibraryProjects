@@ -29,6 +29,6 @@ steps:
 
 - task: NuGetCommand@2
   inputs:
-    command: 'pack'
+    command: 'dotnet pack'
     packagesToPack: '**/*.csproj'
     versioningScheme: 'off'
